@@ -12,5 +12,11 @@ class myhosts {
 		"percona4":
 			ensure	=> "present",
 			ip	=> "192.168.70.5";
+		"puppet":
+			ensure	=> "present",
+			ip 	=> "192.168.70.2";
+		"foreman":
+			ensure	=> "present",
+			ip 	=> "192.168.70.2";
 	}
 }
