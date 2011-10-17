@@ -1,11 +1,13 @@
-class mcollective {
+class mcollective ( $user="mcollective", $password="marionette", $host="mcollective" ) {
 
   $psk            = "unset"
-  $stomp_user     = "mcollective"
-  $stomp_password = "marionette"
-  $stomp_host     = "192.168.99.2"
   $stomp_port     = "6163"
   $factsource     = "facter"
+  $stomp_user     = $user
+  $stomp_password = $password
+  $stomp_host     = $host
 
+  include mcollective::plugins
+  include mcollective::client
   include mcollective::service
 }

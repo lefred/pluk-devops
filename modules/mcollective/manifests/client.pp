@@ -14,7 +14,7 @@ class mcollective::client::actual {
 class mcollective::client::install {
   package { "mcollective-client": 
                 ensure => present, 
-                require => Class["repo"]
+                require => [ Class["Repo::Epel"], Class["Repo::Puppetlabs"] ],
   }
 }
 

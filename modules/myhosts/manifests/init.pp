@@ -18,5 +18,8 @@ class myhosts {
 		"foreman":
 			ensure	=> "present",
 			ip 	=> "192.168.70.2";
+		"mcollective":
+			ensure	=> "present",
+			ip 	=> "192.168.70.2";
 	}
 }

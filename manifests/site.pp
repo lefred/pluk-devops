@@ -3,7 +3,12 @@ node percona1 {
 	#include percona::repository
         #include percona::packages
         #include pacemaker
+	include repo::epel
+	include repo::puppetlabs
 	include myhosts
+	include mcollective
+	include rabbitmq
+	#include foreman
 	#include cacti
 
 	#Class['percona::packages'] -> Class['cacti']
