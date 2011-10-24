@@ -1,0 +1,137 @@
+/usr/sbin/mysqld, Version: 5.5.15-55 (Percona Server (GPL), Release rel21.0, Revision 158). started with:
+Tcp port: 3306  Unix socket: /var/lib/mysql/mysql.sock
+Time                 Id Command    Argument
+# Time: 111011 12:23:56
+# User@Host: root[root] @ localhost []
+# Thread_id: 32  Schema: employees  Last_errno: 0  Killed: 0
+# Query_time: 12.955764  Lock_time: 0.049420  Rows_sent: 10  Rows_examined: 3226046  Rows_affected: 0  Rows_read: 10
+# Bytes_sent: 490  Tmp_tables: 1  Tmp_disk_tables: 0  Tmp_table_sizes: 3327600
+# InnoDB_trx_id: 3B8
+use employees;
+SET timestamp=1318328636;
+select first_name, last_name, salary from employees join salaries on salaries.emp_no=employees.emp_no where salary between 90000 and 95000 order by salary desc limit 10;
+# Time: 111011 12:24:27
+# User@Host: root[root] @ localhost []
+# Thread_id: 32  Schema: employees  Last_errno: 0  Killed: 0
+# Query_time: 27.273257  Lock_time: 0.019458  Rows_sent: 10  Rows_examined: 5988128  Rows_affected: 0  Rows_read: 10
+# Bytes_sent: 503  Tmp_tables: 1  Tmp_disk_tables: 1  Tmp_table_sizes: 105229739
+# InnoDB_trx_id: 3B9
+SET timestamp=1318328667;
+select first_name, last_name, salary from employees join salaries on salaries.emp_no=employees.emp_no order by salary desc limit 10;
+# Time: 111011 12:26:38
+# User@Host: root[root] @ localhost []
+# Thread_id: 33  Schema:   Last_errno: 0  Killed: 0
+# Query_time: 0.114737  Lock_time: 0.000000  Rows_sent: 1  Rows_examined: 0  Rows_affected: 0  Rows_read: 1
+# Bytes_sent: 122  Tmp_tables: 0  Tmp_disk_tables: 0  Tmp_table_sizes: 0
+SET timestamp=1318328798;
+select @@version_comment limit 1;
+# Time: 111011 12:26:41
+# User@Host: root[root] @ localhost []
+# Thread_id: 33  Schema:   Last_errno: 0  Killed: 0
+# Query_time: 0.060618  Lock_time: 0.000000  Rows_sent: 0  Rows_examined: 0  Rows_affected: 0  Rows_read: 0
+# Bytes_sent: 33  Tmp_tables: 0  Tmp_disk_tables: 0  Tmp_table_sizes: 0
+SET timestamp=1318328801;
+select first_name, last_name, salary from employees join salaries on salaries.emp_no=employees.emp_no where salary between 80000 and 85000 and gender="F" order by salary desc limit 10;
+# Time: 111011 12:26:47
+# User@Host: root[root] @ localhost []
+# Thread_id: 33  Schema:   Last_errno: 0  Killed: 0
+# Query_time: 0.015212  Lock_time: 0.000000  Rows_sent: 1  Rows_examined: 0  Rows_affected: 0  Rows_read: 1
+# Bytes_sent: 64  Tmp_tables: 0  Tmp_disk_tables: 0  Tmp_table_sizes: 0
+SET timestamp=1318328807;
+SELECT DATABASE();
+# User@Host: root[root] @ localhost []
+# Thread_id: 33  Schema:   Last_errno: 0  Killed: 0
+# Query_time: 0.019759  Lock_time: 0.000000  Rows_sent: 1  Rows_examined: 0  Rows_affected: 0  Rows_read: 1
+# Bytes_sent: 104  Tmp_tables: 0  Tmp_disk_tables: 0  Tmp_table_sizes: 0
+SET timestamp=1318328807;
+# administrator command: Init DB;
+# Time: 111011 12:26:48
+# User@Host: root[root] @ localhost []
+# Thread_id: 33  Schema:   Last_errno: 0  Killed: 0
+# Query_time: 0.003874  Lock_time: 0.000000  Rows_sent: 1  Rows_examined: 0  Rows_affected: 0  Rows_read: 1
+# Bytes_sent: 64  Tmp_tables: 0  Tmp_disk_tables: 0  Tmp_table_sizes: 0
+SET timestamp=1318328808;
+SELECT DATABASE();
+# User@Host: root[root] @ localhost []
+# Thread_id: 33  Schema: employees  Last_errno: 0  Killed: 0
+# Query_time: 0.005856  Lock_time: 0.000000  Rows_sent: 1  Rows_examined: 0  Rows_affected: 0  Rows_read: 1
+# Bytes_sent: 75  Tmp_tables: 0  Tmp_disk_tables: 0  Tmp_table_sizes: 0
+SET timestamp=1318328808;
+# administrator command: Init DB;
+# User@Host: root[root] @ localhost []
+# Thread_id: 33  Schema: employees  Last_errno: 0  Killed: 0
+# Query_time: 0.065998  Lock_time: 0.041377  Rows_sent: 6  Rows_examined: 6  Rows_affected: 0  Rows_read: 6
+# Bytes_sent: 191  Tmp_tables: 1  Tmp_disk_tables: 0  Tmp_table_sizes: 0
+SET timestamp=1318328808;
+show databases;
+# User@Host: root[root] @ localhost []
+# Thread_id: 33  Schema: employees  Last_errno: 0  Killed: 0
+# Query_time: 0.011517  Lock_time: 0.000898  Rows_sent: 6  Rows_examined: 6  Rows_affected: 0  Rows_read: 6
+# Bytes_sent: 202  Tmp_tables: 1  Tmp_disk_tables: 0  Tmp_table_sizes: 0
+SET timestamp=1318328808;
+show tables;
+# User@Host: root[root] @ localhost []
+# Thread_id: 33  Schema: employees  Last_errno: 0  Killed: 0
+# Query_time: 0.021501  Lock_time: 0.000000  Rows_sent: 0  Rows_examined: 0  Rows_affected: 0  Rows_read: 0
+# Bytes_sent: 0  Tmp_tables: 0  Tmp_disk_tables: 0  Tmp_table_sizes: 0
+SET timestamp=1318328808;
+;
+# User@Host: root[root] @ localhost []
+# Thread_id: 33  Schema: employees  Last_errno: 0  Killed: 0
+# Query_time: 0.007436  Lock_time: 0.000000  Rows_sent: 0  Rows_examined: 0  Rows_affected: 0  Rows_read: 0
+# Bytes_sent: 0  Tmp_tables: 0  Tmp_disk_tables: 0  Tmp_table_sizes: 0
+SET timestamp=1318328808;
+;
+# User@Host: root[root] @ localhost []
+# Thread_id: 33  Schema: employees  Last_errno: 0  Killed: 0
+# Query_time: 0.000828  Lock_time: 0.000000  Rows_sent: 0  Rows_examined: 0  Rows_affected: 0  Rows_read: 0
+# Bytes_sent: 0  Tmp_tables: 0  Tmp_disk_tables: 0  Tmp_table_sizes: 0
+SET timestamp=1318328808;
+;
+# User@Host: root[root] @ localhost []
+# Thread_id: 33  Schema: employees  Last_errno: 0  Killed: 0
+# Query_time: 0.000853  Lock_time: 0.000000  Rows_sent: 0  Rows_examined: 0  Rows_affected: 0  Rows_read: 0
+# Bytes_sent: 0  Tmp_tables: 0  Tmp_disk_tables: 0  Tmp_table_sizes: 0
+SET timestamp=1318328808;
+;
+# User@Host: root[root] @ localhost []
+# Thread_id: 33  Schema: employees  Last_errno: 0  Killed: 0
+# Query_time: 0.000134  Lock_time: 0.000000  Rows_sent: 0  Rows_examined: 0  Rows_affected: 0  Rows_read: 0
+# Bytes_sent: 0  Tmp_tables: 0  Tmp_disk_tables: 0  Tmp_table_sizes: 0
+SET timestamp=1318328808;
+;
+# User@Host: root[root] @ localhost []
+# Thread_id: 33  Schema: employees  Last_errno: 0  Killed: 0
+# Query_time: 0.000909  Lock_time: 0.000000  Rows_sent: 0  Rows_examined: 0  Rows_affected: 0  Rows_read: 0
+# Bytes_sent: 0  Tmp_tables: 0  Tmp_disk_tables: 0  Tmp_table_sizes: 0
+SET timestamp=1318328808;
+;
+# Time: 111011 12:27:12
+# User@Host: root[root] @ localhost []
+# Thread_id: 33  Schema: employees  Last_errno: 0  Killed: 0
+# Query_time: 0.018886  Lock_time: 0.001843  Rows_sent: 12  Rows_examined: 12  Rows_affected: 0  Rows_read: 12
+# Bytes_sent: 578  Tmp_tables: 1  Tmp_disk_tables: 0  Tmp_table_sizes: 0
+SET timestamp=1318328832;
+show global variables like '%slow%';
+# Time: 111011 12:27:32
+# User@Host: root[root] @ localhost []
+# Thread_id: 33  Schema: employees  Last_errno: 0  Killed: 0
+# Query_time: 0.009639  Lock_time: 0.000000  Rows_sent: 0  Rows_examined: 0  Rows_affected: 0  Rows_read: 0
+# Bytes_sent: 11  Tmp_tables: 0  Tmp_disk_tables: 0  Tmp_table_sizes: 0
+SET timestamp=1318328852;
+set global slow_launch_time=0;
+# Time: 111011 12:27:38
+# User@Host: root[root] @ localhost []
+# Thread_id: 33  Schema: employees  Last_errno: 0  Killed: 0
+# Query_time: 0.001441  Lock_time: 0.000340  Rows_sent: 3  Rows_examined: 3  Rows_affected: 0  Rows_read: 3
+# Bytes_sent: 312  Tmp_tables: 1  Tmp_disk_tables: 0  Tmp_table_sizes: 0
+SET timestamp=1318328858;
+show global variables like '%long%';
+# Time: 111011 12:28:01
+# User@Host: root[root] @ localhost []
+# Thread_id: 33  Schema: employees  Last_errno: 0  Killed: 0
+# Query_time: 13.369307  Lock_time: 0.032626  Rows_sent: 100  Rows_examined: 1496057  Rows_affected: 0  Rows_read: 100
+# Bytes_sent: 2779  Tmp_tables: 1  Tmp_disk_tables: 0  Tmp_table_sizes: 2431432
+# InnoDB_trx_id: 3BA
+SET timestamp=1318328881;
+select first_name, last_name, salary from employees join salaries on salaries.emp_no=employees.emp_no where salary between 80000 and 85000 and gender="F" order by salary desc limit 100;
