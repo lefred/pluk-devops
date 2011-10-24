@@ -1,0 +1,15 @@
+devops machine for Percona Live London 2011
+
+add a files/ folder and put the employee files http://dev.mysql.com/doc/employee/en/employee.html
+
+- files/employees_db-code-1.0.6.tar.bz2  
+- files/employees_db-dump-files-1.0.5.tar.bz2
+
+You can also create some jenkins job:
+
+with the following commands shell:
+
+vagrant destroy percona3
+vagrant up percona3
+vagrant provision percona3
+tests/perform_test.sh
