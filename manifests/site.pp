@@ -2,6 +2,8 @@ node percona1 {
         include percona
 	#include percona::repository
         #include percona::packages
+	include percona::toolkit
+	include testdb::employee
         #include pacemaker
 	include repo::epel
 	include repo::puppetlabs
@@ -23,17 +25,21 @@ node percona1 {
 }
 
 node percona2 {
-	include percona::repository
-        include percona::packages
+	
+	#include percona::repository
+        #include percona::packages
         #include pacemaker
-	include cacti
-	include cacti::jmx
+	#include cacti
+	#include cacti::jmx
 	include myhosts
-	include testdb::employee
-	include percona::toolkit
-	include percona::xtrabackup
+	#include testdb::employee
+	#include percona::toolkit
+	#include percona::xtrabackup
+	include repo::epel
+	include repo::puppetlabs
+	include mcollective
 
-	Class['percona::packages'] -> Class['cacti'] -> Class['testdb::employee']
+	#Class['percona::packages'] -> Class['cacti'] -> Class['testdb::employee']
 
 	network::if {
 		"eth3":
